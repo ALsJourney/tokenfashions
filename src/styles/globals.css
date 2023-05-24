@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans-regular.woff");
+}
+
+html,
+#__next {
+  height: 100vh;
+  font-family: "DM Sans", sans;
+}
+
 html {
   background: black;
   color: white;
