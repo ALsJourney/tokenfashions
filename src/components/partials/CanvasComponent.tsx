@@ -3,17 +3,16 @@ import {
   Center,
   OrbitControls,
   useMatcapTexture,
+  useGLTF,
   Html,
 } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useEffect, useRef } from "react";
 
 const material = new THREE.MeshMatcapMaterial();
 
 const CanvasComponent: React.FC = () => {
-  const model = useLoader(GLTFLoader, "/models/hoodie.gltf");
+  const model = useGLTF("./models/hoodie-v2.glb");
 
   const [matcapTexture] = useMatcapTexture("758391_BAC2CA_435263_A1ACBC", 256);
 
