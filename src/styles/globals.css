@@ -11,12 +11,22 @@ html,
 #__next {
   height: 100vh;
   font-family: "DM Sans", sans;
+  font-weight: 500;
 }
 
 html {
-  background: black;
+  background: #0047ab;
   color: white;
 }
+
+/*#__next {
+  background: url(/images/bg.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}*/
 
 .underline-thick::after {
   content: "";

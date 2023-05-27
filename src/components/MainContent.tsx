@@ -3,6 +3,7 @@ import TextComponent from "./partials/TextComponent";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Loader } from "@react-three/drei";
+import Socials from "./Socials";
 const MainContent: React.FC = () => {
   return (
     <div className="flex h-full flex-col overflow-y-auto px-8 md:flex-row">
@@ -23,7 +24,7 @@ const MainContent: React.FC = () => {
         <Loader />
       </div>
 
-      <div className="flex-1 md:px-14">
+      <div className="flex-1">
         <TextComponent />
       </div>
     </div>
