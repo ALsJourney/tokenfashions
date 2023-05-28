@@ -9,10 +9,10 @@ const Socials: React.FC = () => {
         Really excited to get in touch with us?
       </p>
 
-      <div className=" mt-4 flex w-full flex-col items-center justify-between md:flex-row">
+      <div className=" mt-4 flex w-full flex-col items-center md:flex-row">
         <Link
           href="https://twitter.com/tokenfashions"
-          className="mb-4 mr-4 flex items-center"
+          className="mb-4 mr-32 flex items-center"
           passHref
         >
           <TwitterIcon />
@@ -23,7 +23,7 @@ const Socials: React.FC = () => {
           className="mb-4 flex items-center"
           passHref
         >
-          <button className="group relative mt-4 h-12 w-64 overflow-hidden rounded-lg bg-white text-black shadow md:mt-0">
+          <button className="group relative mt-4 h-12 w-64 overflow-hidden rounded-2xl bg-white text-black shadow md:mt-0">
             <div className="absolute inset-0 z-0 w-3 bg-purple-500 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <div className="relative z-10 flex items-center px-6">
               <DiscordIcon className="group-hover:fill-white" />

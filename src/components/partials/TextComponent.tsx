@@ -9,9 +9,9 @@ const TextComponent = () => {
         😤{" "}
       </h1>
       <p className="animate-fade-in text-2xl">
-        <span> 🚀 List your NFTs </span> on Amazon and enjoy affordable quality,
-        effortless listing, and unmatched ease. <br /> <br /> ❤️ Let us take
-        care of your merch while you focus on building on Web3!
+        <span> 🚀 List your NFT merch </span> on Amazon and enjoy affordable
+        quality, effortless listing, and unmatched ease. <br /> <br /> ❤️ Let us
+        take care of your merch while you focus on building on Web3!
       </p>
       <Link href="/customers">
         <button className="group relative mb-8  mt-8 h-12 w-80 overflow-hidden rounded-lg bg-white text-lg shadow md:w-96">
