@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import twitter from "./../../public/images/twitter.svg";
-import discord from "./../../public/images/discord.svg";
-
+import DiscordIcon from "./partials/DiscordIcon";
+import TwitterIcon from "./partials/TwitterIcon";
 const Socials: React.FC = () => {
   return (
     <>
@@ -10,30 +9,19 @@ const Socials: React.FC = () => {
         Really excited to get in touch with us?
       </p>
 
-      <div className="mt-4 flex items-center">
+      <div className=" mt-4 flex flex-col items-center md:flex-row">
         <Link
           href="https://twitter.com/tokenfashions"
-          className="mr-4 flex items-center"
+          className="mb-4 mr-4 flex items-center"
         >
-          <Image
-            src={twitter}
-            alt="Link to twitter icon"
-            width={20}
-            height={20}
-          ></Image>
+          <TwitterIcon />
           <span className="ml-2">@tokenfashions</span>
         </Link>
         <Link
           href="https://discord.gg/VByEgNUFdN"
-          className="flex items-center"
+          className="mb-4 flex items-center rounded bg-white p-4 text-black"
         >
-          <Image
-            src={discord}
-            alt="Link to discord icon"
-            width={20}
-            height={20}
-          ></Image>
-          <span className="ml-2">Join our discord today!</span>
+          <DiscordIcon /> <span className="ml-2">Join our discord today!</span>
         </Link>
       </div>
     </>
