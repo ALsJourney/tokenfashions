@@ -7,7 +7,11 @@ import {
 } from "@react-three/drei";
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
-import { useFrame, useThree } from "@react-three/fiber";
+import { extend, useFrame, useThree } from "@react-three/fiber";
+import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
+
+extend({ OrbitControlsImpl });
+
 const material = new THREE.MeshMatcapMaterial();
 
 const CanvasComponent: React.FC = () => {
@@ -17,17 +21,27 @@ const CanvasComponent: React.FC = () => {
 
   const modelRef = useRef<THREE.Object3D>();
 
-  const controlsRef = useRef<OrbitControls>();
+  const controlsRef = useRef<OrbitControlsImpl | null>(null);
 
   const autoRotate = useRef(true);
 
+  const {
+    camera,
+    gl: { domElement },
+  } = useThree();
   useEffect(() => {
+    if (controlsRef.current) {
+      controlsRef.current = new OrbitControlsImpl(camera, domElement);
+    }
     matcapTexture.encoding = THREE.sRGBEncoding;
     material.matcap = matcapTexture;
     material.needsUpdate = true;
   }, []);
 
   useFrame(({ clock }: { clock: THREE.Clock }) => {
+    if (controlsRef.current) {
+      controlsRef.current.update();
+    }
     if (modelRef.current && autoRotate.current) {
       modelRef.current.rotation.y += 0.01;
     }
