@@ -34,6 +34,14 @@ const Socials: React.FC = () => {
           </button>
         </Link>
       </div>
+      <Link href="/customers">
+        <button className="group relative mb-8  mt-8 h-12 w-80 overflow-hidden rounded-lg bg-white text-lg shadow md:w-96">
+          <div className="absolute inset-0 w-3 bg-yellow transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+          <span className="relative text-center text-black group-hover:text-gray-700">
+            See who we worked with! ➡️
+          </span>
+        </button>
+      </Link>
     </>
   );
 };
